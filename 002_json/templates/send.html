@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html, body, h1 {
+            padding: 0;
+            border: 0;
+            margin: 0;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 6rem;
+            color: cadetblue;
+            text-align: center;
+            max-width: 1024px;
+        }
+    </style>
+</head>
+<body>
+    <h1>We are now going to send data to the /catch path</h1>
+
+
+    <script>
+        data = '[{"First":"Tyler","Last":"Souza"},{"First":"Sydeny","Last":"Aussie"}]';
+        console.log(data);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/ret', true);
+        xhr.send(data)
+    </script>
+</body>
+</html>
